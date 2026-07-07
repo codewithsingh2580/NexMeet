@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "``` nexmeet-backend/ ├── server.js                  # Entry point: connects DB, starts HTTP + Socket.IO ├── app.js                     # Express app: middleware + route mounting ├── config/ │   └── db.js                  # Mongoose connection ├── models/ │   ├── Message.js              # Chat message schema │   ├── Session.js              # Join/leave log schema │   └── Room.js                  # Persisted room metadata schema ├── controllers/ │   ├── healthController.js │   └── roomController.js       # Room info + message/session history endpoints ├── routes/ │   ├── healthRoutes.js │   ├── roomRoutes.js │   └── auth.js                  # <- your existing auth routes, paste in unchanged ├── middleware/ │   └── requireAuth.js           # <- your existing middleware, paste in unchanged ├── sockets/ │   ├── index.js                 # Creates io, attaches auth + handlers │   ├── socketAuth.js            # io.use() handshake auth │   ├── roomStore.js             # In-memory live room state (Map) — NOT persisted │   └── handlers/ │       ├── roomHandlers.js      # join-room, kick-peer, disconnect, DB logging │       ├── signalingHandlers.js # offer/answer/ice-candidate/media-state/screen-share/raise-hand │       └── chatHandlers.js      # chat-message (emits live + saves to MongoDB) ├── jwt.js                       # <- your existing file, paste in unchanged ├── userStore.js                 # <- your existing file, paste in unchanged └── .env.example ```",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.24.1",
+    "nodemon": "^3.1.14",
+    "socket.io": "^4.8.3",
+    "uuid": "^14.0.1"
+  }
+}

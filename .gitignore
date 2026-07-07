@@ -1,0 +1,17 @@
+# Ignores node_modules anywhere in the project
+node_modules/
+
+# Ignores .env anywhere in the project
+.env
+backend/.env
+frontend/.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# Build output
+frontend/dist/
+frontend/build/
