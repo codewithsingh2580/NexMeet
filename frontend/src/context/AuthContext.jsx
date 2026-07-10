@@ -1,12 +1,7 @@
-/**
- * AuthContext.jsx
- * Global auth state: token stored in localStorage, user object in memory.
- * Provides: user, token, login(), register(), logout(), loading
- */
 
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
 
-const API = import.meta.env.VITE_SERVER_URL || "http://localhost:4000";
+const API = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
 const AuthContext = createContext(null);
 
