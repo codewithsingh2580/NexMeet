@@ -6,7 +6,7 @@ import AuthScreen from "./components/AuthScreen";
 import Lobby from "./components/Lobby";
 import Meeting from "./components/Meeting";
 
-const SOCKET_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:4000";
+const SOCKET_URL = import.meta.env.VITE_SERVER_URL || "https://nexmeet-2-gf0s.onrender.com";
 
 const STATE = { AUTH: "auth", LOBBY: "lobby", MEETING: "meeting" };
 
