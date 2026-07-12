@@ -5,7 +5,7 @@ import authRoutes from "./routes/auth.js";
 import healthRoutes from "./routes/healthRoutes.js";
 import roomRoutes from "./routes/roomRoutes.js";
 
-const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+const CLIENT_URL = process.env.CLIENT_URL || "https://nexmeetfrontend-tgz8.onrender.com";
 
 export const createApp = () => {
   const app = express();
