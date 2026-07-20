@@ -12,6 +12,6 @@ frontend/.env
 # OS files
 .DS_Store
 
-# Build output
+# Build output 
 frontend/dist/
 frontend/build/
